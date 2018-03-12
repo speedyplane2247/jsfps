@@ -3,7 +3,7 @@ JSFPS
 (c) speedyplane2247 2017-2018
 Simple game
 */
-var gunSpeed = [0.5, 10, 0.9, 0.01, 1, 3]; // Sniper, Machine, Pistol RPSecond
+var gunSpeed = [0.5, 10, 0.9, 0.01, 0.729, 3]; // Sniper, Machine, Pistol RPSecond
 var pos = [ 0,0, 100 ];
 var ai1 = [ 10,10, 100 ]
 var ai2 = [ 20,20, 100 ]
@@ -11,11 +11,11 @@ var ai3 = [ 21, 55, 100]
 var ai4 = [ -2, 5, 100 ]
 var ai5 = [ -10, -10, 100]
 var ai6 = [ -20, -20, 100]
-var weaponDamage = [1, 5, 70,120,25,9]
+var weaponDamage = [1, 5, 70,170,20,9]
 var HousingMapY=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,9,9,9,9,11,12,13,14,15,15,15,15,15,3,3,3,3,3,4,5,5,5,5,5,24,23,22,21,20,19,18,17,16,24,24,24,23,22,21,20,19,18,17,16,23,22,21,20,19,18,17,16,15,14,22,22,21,20,19,18,17,16,15,14,13,12,11,11,11,9,9,9,8,7,6,5,8,7,6,5,22,22,22,23,24,25];
 var HousingMapX=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,2,3,4,5,6,6,6,6,6,4,3,2,1,6,7,8,9,10,10,10,9,8,7,6,8,8,8,8,8,8,8,8,8,9,10,11,11,11,11,11,11,11,11,11,13,13,13,13,13,13,13,13,13,13,14,15,15,15,15,15,15,15,15,15,15,15,15,14,13,13,14,15,15,15,15,15,13,13,13,13,24,23,22,22,22,22];
 // The X and Y of objects in example map "Housing"
-var GameVersion = "1.0.2-patch3";
+var GameVersion = "1.0.2-patch4";
 function askForName() {
 var person = prompt("Please enter your player name", "Guest"+Math.floor(Math.random() * Math.floor(99999)));
 alert("Hello, "+ person +" !");
@@ -331,4 +331,4 @@ console.log("To see your position, type myPos().")
 console.log("To see another player’s position, type checkRadar()")
 console.log("If you want to review this message, type help().")
 }
-// patch3 boosts the rifle
+// patch4- boosted rocket to advertised, nerfed shotgun. (it's OP)
