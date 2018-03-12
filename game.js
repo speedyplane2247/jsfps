@@ -15,7 +15,7 @@ var weaponDamage = [1, 5, 70,170,20,9]
 var HousingMapY=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,9,9,9,9,11,12,13,14,15,15,15,15,15,3,3,3,3,3,4,5,5,5,5,5,24,23,22,21,20,19,18,17,16,24,24,24,23,22,21,20,19,18,17,16,23,22,21,20,19,18,17,16,15,14,22,22,21,20,19,18,17,16,15,14,13,12,11,11,11,9,9,9,8,7,6,5,8,7,6,5,22,22,22,23,24,25];
 var HousingMapX=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,2,3,4,5,6,6,6,6,6,4,3,2,1,6,7,8,9,10,10,10,9,8,7,6,8,8,8,8,8,8,8,8,8,9,10,11,11,11,11,11,11,11,11,11,13,13,13,13,13,13,13,13,13,13,14,15,15,15,15,15,15,15,15,15,15,15,15,14,13,13,14,15,15,15,15,15,13,13,13,13,24,23,22,22,22,22];
 // The X and Y of objects in example map "Housing"
-var GameVersion = "1.0.2-patch4";
+var GameVersion = "1.0.3";
 function askForName() {
 var person = prompt("Please enter your player name", "Guest"+Math.floor(Math.random() * Math.floor(99999)));
 alert("Hello, "+ person +" !");
@@ -123,118 +123,145 @@ function checkifShotHit(gunX2,timeShoot) {
 
 if (pos[0] == ai1[0] && pos[1] == ai1[1]) {
 if (gunX2 == "Sniper") {
+    pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
     ai1[2] = ai1[2] - weaponDamage[2] * timeShoot
     tellServerMoved("damage","Sniper","ai1",ai1[2])
 }
 if (gunX2 == "Pistol") {
+    pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
     ai1[2] = ai1[2] - weaponDamage[1] * timeShoot
     tellServerMoved("damage","Pistol","ai1",ai1[2])
 }
 if (gunX2 == "Machine") {
+    pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
     ai1[2] = ai1[2] - weaponDamage[0] * timeShoot
     tellServerMoved("damage","Machine","ai1",ai1[2])
 }
 if (gunX2 == "Rocket") {
+    pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
     ai1[2] = ai1[2] - weaponDamage[3] * timeShoot
     tellServerMoved("damage","Machine","ai1",ai1[2])
 }
 if (gunX2 == "Shotgun") {
+    pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
     ai1[2] = ai1[2] - weaponDamage[4] * timeShoot
     tellServerMoved("damage","Machine","ai1",ai1[2])
 }
 if (gunX2 == "Rifle") {
+    pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
     ai1[2] = ai1[2] - weaponDamage[5] * timeShoot
     tellServerMoved("damage","Machine","ai1",ai1[2])
 }
 }
 if (pos[0] == ai2[0] && pos[1] == ai2[1]) {
     if (gunX2 == "Sniper") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai2[2] = ai2[2] - weaponDamage[2] * timeShoot
         tellServerMoved("damage",gunX2,"ai2",ai2[2])
     }
     if (gunX2 == "Pistol") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai2[2] = ai2[2] - weaponDamage[1] * timeShoot
         tellServerMoved("damage",gunX2,"ai2",ai2[2])
     }
     if (gunX2 == "Machine") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai2[2] = ai2[2] - weaponDamage[0] * timeShoot
         tellServerMoved("damage",gunX2,"ai2",ai2[2])
     }
     if (gunX2 == "Rocket") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai2[2] = ai2[2] - weaponDamage[3] * timeShoot
         tellServerMoved("damage",gunX2,"ai2",ai2[2])
     }
     if (gunX2 == "Shotgun") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai2[2] = ai2[2] - weaponDamage[4] * timeShoot
         tellServerMoved("damage",gunX2,"ai2",ai2[2])
     }
     if (gunX2 == "Rifle") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai2[2] = ai2[2] - weaponDamage[5] * timeShoot
         tellServerMoved("damage",gunX2,"ai2",ai2[2])
     }
 }
 if (pos[0] == ai3[0] && pos[1] == ai3[1]) {
     if (gunX2 == "Sniper") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai3[2] = ai3[2] - weaponDamage[2] * timeShoot
         tellServerMoved("damage",gunX2,"ai3",ai3[2])
     }
     if (gunX2 == "Pistol") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai3[2] = ai3[2] - weaponDamage[1] * timeShoot
         tellServerMoved("damage",gunX2,"ai3",ai3[2])
     }
     if (gunX2 == "Machine") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai3[2] = ai3[2] - weaponDamage[0] * timeShoot
         tellServerMoved("damage",gunX2,"ai3",ai3[2])
     }
     if (gunX2 == "Rocket") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai3[2] = ai3[2] - weaponDamage[3] * timeShoot
         tellServerMoved("damage",gunX2,"ai3",ai3[2])
     }
     if (gunX2 == "Shotgun") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai3[2] = ai3[2] - weaponDamage[4] * timeShoot
         tellServerMoved("damage",gunX2,"ai3",ai3[2])
     }
     if (gunX2 == "Rifle") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai3[2] = ai3[2] - weaponDamage[5] * timeShoot
         tellServerMoved("damage",gunX2,"ai3",ai3[2])
     }
 }
 if (pos[0] == ai4[0] && pos[1] == ai4[1]) {
     if (gunX2 == "Sniper") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai4[2] = ai4[2] - weaponDamage[2] * timeShoot
         tellServerMoved("damage",gunX2,"ai4",ai4[2])
     }
     if (gunX2 == "Pistol") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai4[2] = ai4[2] - weaponDamage[1] * timeShoot
         tellServerMoved("damage",gunX2,"ai4",ai4[2])
     }
     if (gunX2 == "Machine") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai4[2] = ai4[2] - weaponDamage[0] * timeShoot
         tellServerMoved("damage",gunX2,"ai4",ai4[2])
     }
     if (gunX2 == "Rocket") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai4[2] = ai4[2] - weaponDamage[3] * timeShoot
         tellServerMoved("damage",gunX2,"ai4",ai4[2])
     }
     if (gunX2 == "Shotgun") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai4[2] = ai4[2] - weaponDamage[4] * timeShoot
         tellServerMoved("damage",gunX2,"ai4",ai4[2])
     }
     if (gunX2 == "Rifle") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai4[2] = ai4[2] - weaponDamage[5] * timeShoot
         tellServerMoved("damage",gunX2,"ai4",ai4[2])
     }
 }
 if (pos[0] == ai5[0] && pos[1] == ai5[1]) {
     if (gunX2 == "Sniper") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai5[2] = ai5[2] - weaponDamage[2] * timeShoot
         tellServerMoved("damage",gunX2,"ai5",ai5[2])
     }
     if (gunX2 == "Pistol") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai5[2] = ai5[2] - weaponDamage[1] * timeShoot
         tellServerMoved("damage",gunX2,"ai5",ai5[2])
     }
     if (gunX2 == "Machine") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai5[2] = ai5[2] - weaponDamage[0] * timeShoot
         tellServerMoved("damage",gunX2,"ai5",ai5[2])
     }
@@ -243,62 +270,80 @@ if (pos[0] == ai5[0] && pos[1] == ai5[1]) {
         tellServerMoved("damage",gunX2,"ai5",ai5[2])
     }
     if (gunX2 == "Shotgun") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai5[2] = ai5[2] - weaponDamage[4] * timeShoot
         tellServerMoved("damage",gunX2,"ai5",ai5[2])
     }
     if (gunX2 == "Rifle") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai5[2] = ai5[2] - weaponDamage[5] * timeShoot
         tellServerMoved("damage",gunX2,"ai5",ai5[2])
     }
 }
 if (pos[0] == ai6[0] && pos[1] == ai6[1]) {
     if (gunX2 == "Sniper") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai6[2] = ai6[2] - weaponDamage[2] * timeShoot
         tellServerMoved("damage",gunX2,"ai6",ai6[2])
     }
     if (gunX2 == "Pistol") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai6[2] = ai6[2] - weaponDamage[1] * timeShoot
         tellServerMoved("damage",gunX2,"ai6",ai6[2])
     }
     if (gunX2 == "Machine") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai6[2] = ai6[2] - weaponDamage[0] * timeShoot
         tellServerMoved("damage",gunX2,"ai6",ai6[2])
     }
     if (gunX2 == "Rocket") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai6[2] = ai6[2] - weaponDamage[3] * timeShoot
         tellServerMoved("damage",gunX2,"ai6",ai6[2])
     }
     if (gunX2 == "Shotgun") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai6[2] = ai6[2] - weaponDamage[4] * timeShoot
         tellServerMoved("damage",gunX2,"ai6",ai6[2])
     }
     if (gunX2 == "Rifle") {
+        pos[2] = pos[2] - 30; console.log("You took 30 damage!"); tellServerMoved("damage","aiGun",person,pos[2]); if (pos[2] < 1) { console.log("You died!") }
         ai6[2] = ai6[2] - weaponDamage[5] * timeShoot
         tellServerMoved("damage",gunX2,"ai6",ai6[2])
     }
 }
+if (pos[2] < 1) {
+console.log("YOU DIED!")
+document.write("YOU DIED!")
+}
 if (ai1[2] < 1) {
 console.log("You killed AI1!")
 tellServerMoved("kill",gunX2,"ai1",GameVersion)
+ai1[2] = 100
 }
 if (ai2[2] < 1) {
     console.log("You killed AI2!")
     tellServerMoved("kill",gunX2,"ai2",GameVersion)
+    ai2[2] = 100
     }
     if (ai3[2] < 1) {
         console.log("You killed AI3!")
         tellServerMoved("kill",gunX2,"ai3",GameVersion)
+        ai3[2] = 100.4201
         }
         if (ai4[2] < 1) {
+            ai4[2] = 100
             console.log("You killed AI4!")
             tellServerMoved("kill",gunX2,"ai4",GameVersion)
             }
             if (ai5[2] < 1) {
+                ai5[2] = 100
                 console.log("You killed AI5!")
                 tellServerMoved("kill",gunX2,"ai5",GameVersion)
                 }
                 if (ai6[2] < 1) {
                     console.log("You killed AI6!")
+                    ai5[2] = 100
                     tellServerMoved("kill",gunX2,"ai6",GameVersion)
                     }
 }
@@ -331,4 +376,4 @@ console.log("To see your position, type myPos().")
 console.log("To see another player’s position, type checkRadar()")
 console.log("If you want to review this message, type help().")
 }
-// patch4- boosted rocket to advertised, nerfed shotgun. (it's OP)
+// 1.0.3: AI fights back!
